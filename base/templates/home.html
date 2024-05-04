@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>Home page</p>
+    <!-- Форма для безопасного выхода -->
+    <form action="{% url 'base:logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">logout</button>
+    </form>
+{% endblock content %}
